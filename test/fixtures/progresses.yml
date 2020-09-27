@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  totalpages: 1
+  pagesread: 1
+  started: 2020-09-27
+  finished: 2020-09-27
+  status: MyString
+
+two:
+  totalpages: 1
+  pagesread: 1
+  started: 2020-09-27
+  finished: 2020-09-27
+  status: MyString
