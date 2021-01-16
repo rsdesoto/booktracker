@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails/React book tracker for edification and enjoyment
 
-Things you may want to cover:
+### Tutorials used
+* https://blog.heroku.com/a-rock-solid-modern-web-stack
+* https://sloboda-studio.com/blog/how-to-integrate-react-with-ruby-on-rails/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### To do list
+* get this puppy onto Heroku
+* start displaying books that exist in the DB
+* Make some fast and loose auth so it's not completely open
