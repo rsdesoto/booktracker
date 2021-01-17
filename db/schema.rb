@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_09_27_174640) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_27_174640) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "author_id"
+    t.bigint "author_id"
     t.index ["author_id"], name: "index_books_on_author_id"
   end
 
@@ -34,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_09_27_174640) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "book_id"
+    t.bigint "book_id"
     t.index ["book_id"], name: "index_progresses_on_book_id"
   end
 
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_09_27_174640) do
     t.text "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "book_id"
+    t.bigint "book_id"
     t.index ["book_id"], name: "index_ratings_on_book_id"
   end
 
