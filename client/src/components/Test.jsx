@@ -6,11 +6,11 @@ export default class Test extends React.Component {
   componentDidMount() {
     window.fetch('/api/books')
       .then(response => response.json())
-      .then(json => console.log(json))
+      // .then(json => console.log(json))
 
     axios.get('/api/books').then(response => {
       console.log('axios')
-      console.log(response)
+      // console.log(response)
     })
   }
 
