@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Test from './components/Test.jsx'
+import Example from './components/Test2.jsx'
 
 function App() {
   return (
@@ -11,15 +12,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
         <Test />
+        <Example />
       </header>
     </div>
   );
