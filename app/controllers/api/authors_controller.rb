@@ -10,4 +10,12 @@ class Api::AuthorsController < ApiController
   def show
     render json: @authors.find(params[:id]).to_json
   end
+
+  def create
+    puts 'easily findable'
+    puts params
+    puts params[:name]
+    puts 'end findable'
+    @author = Author.create(name: params[:name])
+  end
 end
