@@ -21,8 +21,11 @@ function BookContainer() {
       books.map((book, i) => {
         return(
           <BookCard
-            id={book.id}
-            key={i}
+            title={book.title}
+            author={book.author.name}
+            rating={book?.rating?.rating || ''}
+            review={book?.rating?.review || ''}
+            key={book.id}
           />
         )
       })

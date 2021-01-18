@@ -3,31 +3,22 @@ import axios from 'axios'
 import AuthorCard from './AuthorCard'
 
 function BookCard(props) {
-  const id = props.id
-  const [book, setBook] = useState({});
-
-  useEffect(() => {
-    axios.get(`/api/books/${id}`).then(response => {
-      setBook(response.data)
-    })
-  }, [])
+  const { title, author, rating, review } = props
 
   return (
     <div>
       <div>
-        {book.title}
+        {title}
       </div>
       <div>
-        {book.id}
+        {author}
       </div>
       <div>
-        {book.author_id}
+        {rating}
       </div>
-      {book.author_id &&
-        <AuthorCard
-        id={book.author_id}
-        />
-      }
+      <div>
+        {review}
+      </div>
     </div>
   );
 }
