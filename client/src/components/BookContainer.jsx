@@ -17,8 +17,16 @@ function BookContainer() {
 
   return (
     <div>
-      Testing some stuff
-      <BookCard />
+    {
+      books.map((book, i) => {
+        return(
+          <BookCard
+            id={book.id}
+            key={i}
+          />
+        )
+      })
+    }
     </div>
   );
 }

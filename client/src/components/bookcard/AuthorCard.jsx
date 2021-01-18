@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 function AuthorCard(props) {
-  console.log(props)
-  console.log(props.id)
   const [author, setAuthor] = useState({});
 
   useEffect(() => {
@@ -12,9 +10,6 @@ function AuthorCard(props) {
       setAuthor(response.data)
     })
   }, [props])
-
-  console.log(author)
-
 
   return (
     <div>
