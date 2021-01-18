@@ -1,0 +1,9 @@
+.addition-container {
+  width: 600px;
+  border: 1px solid white;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}

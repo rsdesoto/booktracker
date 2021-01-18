@@ -2,10 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 import BookContainer from './components/BookContainer.jsx'
+import AdditionContainer from './components/AdditionContainer.jsx'
 
 function App() {
   return (
     <div className="App">
+      <AdditionContainer />
       <BookContainer />
     </div>
   );
