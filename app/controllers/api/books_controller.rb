@@ -4,10 +4,12 @@ class Api::BooksController < ApiController
   end
 
   def index
-    render json: @books.to_json
+    render json: @books.to_json(include: :author)
   end
 
   def show
-    render json: @books.find(params[:id]).to_json
+    book = @books.find(params[:id])
+
+    render json: book.to_json(include: :author)
   end
 end
