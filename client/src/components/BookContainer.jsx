@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import BookCard from './bookcard/BookCard'
 
+import './stylesheets/BookContainer.css'
+
 function BookContainer() {
   // get the full list of books and put into containers
   const [books, setBooks] = useState([]);
@@ -16,7 +18,7 @@ function BookContainer() {
   console.log(books)
 
   return (
-    <div>
+    <div className="book-container">
     {
       books.map((book, i) => {
         return(
@@ -25,6 +27,7 @@ function BookContainer() {
             author={book.author.name}
             rating={book?.rating?.rating || ''}
             review={book?.rating?.review || ''}
+            progress={book?.progress || ''}
             key={book.id}
           />
         )

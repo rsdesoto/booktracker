@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import AuthorCard from './AuthorCard'
+import BookTitle from './BookTitle'
+import BookReview from './BookReview'
+import BookProgress from './BookProgress'
+
+import '../stylesheets/BookCard.css'
 
 function BookCard(props) {
-  const { title, author, rating, review } = props
+  const { title, author, rating, review, progress } = props
 
   return (
-    <div>
+    <div className="book-card">
       <div>
-        {title}
+        <BookTitle
+          title={title}
+          author={author}
+        />
       </div>
       <div>
-        {author}
+        <BookReview
+          review={review}
+          rating={rating}
+        />
       </div>
       <div>
-        {rating}
-      </div>
-      <div>
-        {review}
+        <BookProgress
+          progress={progress}
+        />
       </div>
     </div>
   );

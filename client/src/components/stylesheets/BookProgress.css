@@ -1,0 +1,7 @@
+.book-progress {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid white;
+}

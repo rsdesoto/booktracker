@@ -1,0 +1,12 @@
+.book-review {
+  min-height: 200px;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+}
+
+.book-review-rating {
+  width: 12%;
+}
