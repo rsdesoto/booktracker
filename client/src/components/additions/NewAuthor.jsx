@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
-import NewAuthor from './additions/NewAuthor'
-
-import './stylesheets/AdditionContainer.css'
-
 // will include add book and add author buttons
-function AdditionContainer() {
+function NewAuthor() {
   // get the full list of books and put into containers
   const [newAuthorName, setNewAuthorName] = useState('');
 
   const updateAuthorName = (e) => {
-    // console.log("hello world")
-    // console.log(e.target.value)
     setNewAuthorName(e.target.value)
   }
 
@@ -26,16 +20,21 @@ function AdditionContainer() {
   }
 
   return (
-    <div className="addition-container">
-      <div>
-
-        <NewAuthor />
-      </div>
-      <div>
-        Add Book
+    <div>
+      <input
+        type="text"
+        id="new-author"
+        name="new-author"
+        value={newAuthorName}
+        onChange={updateAuthorName}
+      />
+      <div
+        onClick={sendAuthorName}
+      >
+        Add Author
       </div>
     </div>
   );
 }
 
-export default AdditionContainer
+export default NewAuthor

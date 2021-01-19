@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
+
 import BookTitle from './BookTitle'
 import BookReview from './BookReview'
 import BookProgress from './BookProgress'
