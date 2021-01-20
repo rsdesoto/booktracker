@@ -12,4 +12,11 @@ class Api::BooksController < ApiController
 
     render json: book.to_json(include: [:author, :rating, :progress])
   end
+
+  def create
+    puts 'easily findable - create book'
+    puts params
+    puts params[:title]
+    @book = Book.create(title: params[:title], author_id: params[:author_id])
+  end
 end
