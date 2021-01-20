@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import NewAuthor from './additions/NewAuthor'
+import NewBook from './additions/NewBook'
 
 import './stylesheets/AdditionContainer.css'
 
@@ -32,7 +33,7 @@ function AdditionContainer() {
         <NewAuthor />
       </div>
       <div>
-        Add Book
+        <NewBook />
       </div>
     </div>
   );
